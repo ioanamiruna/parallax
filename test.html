@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet/scss" type="text/css" href="test.scss">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='./style/test.css'/>
+</head>
+<body>
+   <div class="container">
+       <header>
+           <a href="" class="logo">Nature</a>
+           <nav>
+               <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/menu.svg" alt="">
+
+           </nav>
+       </header>
+
+       <h1 class='selector' >Preserve Nature</h1>
+
+       <div class="line "></div>
+   </div>
+
+   <div class="container secondary">
+       <h2>Strategic</h2>
+<p class="subtext">Alliances</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum expedita sed maiores ipsa soluta explicabo quisquam corporis at cum sequi suscipit eaque, ullam magni ab atque, provident officiis dolorem.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum expedita sed maiores ipsa soluta explicabo quisquam corporis at cum sequi suscipit eaque, ullam magni ab atque, provident officiis dolorem.</p>
+  </div>
+    
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/mountains.png" alt="" class='mountains'>
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/forest.png" alt="Mountains" class="trees lax" data-lax-translate-y="0 1, 400 -260">
+   <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+
+
+<script>
+  window.onload = function () {
+    lax.init()
+
+    // Add a driver that we use to control our animations
+    lax.addDriver('scrollY', function () {
+      return window.scrollY
+    })
+
+    // Add animation bindings to elements
+    lax.addElements('.selector', {
+              // Animation data
+    scrollY: {  
+      translateY: [
+        [0,100],
+        [0, -100]
+      ]
+    }
+  
+    })
+    lax.addElements('.line', {
+              // Animation data
+    scrollY: {  
+      opacity: [
+        [0,100],
+        [1, 0]
+      ]
+    }
+  
+    })
+     lax.addElements('.mountains', {
+              // Animation data
+    scrollY: {  
+      translateY: [
+        [0,400],
+        [1,-100]
+      ]
+    }
+  
+    })
+     lax.addElements('.trees', {
+              // Animation data
+    scrollY: {  
+      translateY: [
+       [0,400],
+       [1,-260]
+      ]
+    }
+  
+    })
+     lax.addElements('.secondary', {
+              // Animation data
+    scrollY: {  
+      translateY: [
+       [0,400],
+       [0,-600]
+      ],
+      opacity: [
+         [0,200],
+         [0,1]
+         
+      ]
+    }
+  
+    })
+  }
+</script>
+
+</body>
+</html>
